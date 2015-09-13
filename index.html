@@ -1,0 +1,354 @@
+<!DOCTYPE html lang="ar">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ضرايبك فين؟ | يهدف بتعريف الجهات التي تتحصل على ضرائب كسب العمل</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/packery/1.4.1/packery.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui-sliderAccess.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="assets/js/sectors.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!--script>
+    $(document).ready(function(){
+      // Colorize Sector backgrounds and its icons
+      var clr = "203040,fb7345,fe8081,60a0e0,ffd140,01c0a1".split(",")
+      $('#result .icon').each(function(){
+        $(this).css('background-color',clr[$(this).index()])
+      })
+    });
+  </script-->
+</head>
+<body>
+    <div class="full-content">
+        <div class="pane pane-right">
+            <div class="inside">
+                <div class="header">
+                    <div class="logo">
+                        <h1>ضرايبك <span>فين؟</span></h1>
+                    </div>
+                    <div id="menu-tab">
+                      <div class="wrap">
+                        <ul>
+                            <li><a href="#about">ايه هو؟</a></li>
+                            <li><a href="#how">ازاي؟</a></li>
+                            <li><a href="#why">ليه؟</a></li>
+                            <li><a href="#who">مين؟</a></li>
+                        </ul>
+                      </div>
+                    <div id="about" class="scrl">
+                        <div class="content">
+                          <p>الموقع بيوفر أداة عن طريقها تقدر تعرف الضرايب اللي بتدفعها من دخلك، وكمان يحسبلك نسب توزيعها، وبمعنى آخر الوسيلة هتساعدك في: </p>
+                          <ol>
+                              <li>إزاي بتتحسب الضريبة اللي مفروض تدفعها على دخلك</li>
+                              <li>نسبة ضريبتك وفقا لدخلك</li>
+                              <li>توزيع الضريبة على القطاعات الرئيسية في الموازنة</li>
+                          </ol>
+                          <img class="how-to" src="assets/img/how-to.png">
+                        </div>
+                    </div>
+                    <div id="how" class="scrl">
+                        <div class="content">
+                            <p>الموقع هيحسب قيمة ضرايبك وفقاً للتعديلات الجديدة واللي صدرت في الجريدة الرسمية عدد 34 (تابع) في 20 أغسطس 2015.</p>
+                            <p>ضريبة الدخل بتتحسب على المرتب سنوياً، ومن  5 شرائح حددها القانون. كمان في حد للإعفاء الشخصي 7000 جنيه اللي هو عبارة عن ... وموجود في قانون الضريبة على الدخل رقم 91 لسنة 2005.</p>
+                            <p>الشرايح هم:</p>
+                            <div class="brackets">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th>الشريحة</th>
+                                  <th>الدخل (سنويا)</th>
+                                  <th>نسبة الضريبة</th>
+                                </tr>
+                                <tr>
+                                  <td>الأولى</td>
+                                  <td>أقل من 6500 جـ </td>
+                                  <td>معفاة من الضريبة</td>
+                                </tr>
+                                <tr>
+                                  <td>التانية</td>
+                                  <td>أكتر من 6500 جـ  أو أقل من 30000 جـ </td>
+                                  <td>10%</td>
+                                </tr>
+                                <tr>
+                                  <td>التالتة</td>
+                                  <td>أكتر من 30000 جـ  أو أقل من 45000 جـ </td>
+                                  <td>15%</td>
+                                </tr>
+                                <tr>
+                                  <td>الرابعة</td>
+                                  <td>أكتر من 45000 جـ  أو أقل من 200000 جـ </td>
+                                  <td>20%</td>
+                                </tr>
+                                <tr>
+                                  <td>الخامسة</td>
+                                  <td>أكتر من 200000 جـ </td>
+                                  <td>22.5%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                            <p>                  الشريحة مش بتمثل تصنيف للمرتبات، بمعني كل لما زاد المرتب زادت الضريبة. مرتب الفرد الواحد ممكن يدخل في أكتر من شريحة.</p>
+                            <p><strong>مثال</strong><br>
+                            لو مرتب فرد السنوي هو <strong>51000 جـ </strong>.
+                            ده مش معناه أنه هيكون تحت الشريحة الرابعة اللي هيكون قيمة الضريبة 20% من المرتب السنوي.</p>
+                            <p><strong>لكن </strong> الضريبة تُحسب بعد خصم الاعفاء الشخصي<em>7000جـ </em>وتكون الضريبة على أول <em>6500جـ </em>معفية. <br>
+                            ومن المتبقي تكون الضريبة على <em>30000جـ </em> هي <em>10% </em> بالإضافة إلى <em>15% </em> على <em>7500جـ </em> المتبقية.
+                            </p>
+
+                            </div>
+                    </div>
+                    <div id="why" class="scrl">
+                        <div class="content">
+                        <p>دايماً الناس بتسأل عن الضرايب اللي بتدفعها بتروح فين، ومدى الاستفادة الحقيقية؟ وبعد التعديل اللي حصل في قانون الضرايب على الدخل والكلام عن مدى جدواه، فكرنا في عمل وسيلة عشان نشوف بيها الضرايب اللي بتتاخد من دخل المواطن العادي بتروح فين، وازاي بتتوزع على القطاعات والخدمات المختلفة؛ يعنى نعرف إيه بيروح منها للصحة، التعليم، الأمن، وغيرها. </p>
+                        </div>
+                    </div>
+                    <div id="who" class="scrl">
+                        <div class="content">
+                        <p>هي أحد مشاريع برنامج الشفافية والمساءلة بـ<a href=http://sitcegypt.org>مركز دعم لتقنية المعلومات <img src="assets/img/sitc-logo.png"></a> وهي منظمة حقوقية تأسست كمبادرة عام 2004 واتخذت هيكل مؤسسي سنة 2006، تعمل من أجل تعزيز الحق في المعرفة وحرية تداول المعلومات في مصر، وذلك بالعمل في مجال البحث والدعوة والتدريب من أجل تعزيز حرية تداول المعلومات، والشفافية والمساءلة، وإستقلالية الإعلام</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="landing">
+                    <div class="content">
+                        <p>الموقع يؤسس لمبادئ الشفافية فيما يتعلق بالضرائب التي تحصلها الدولة من أموال المواطنين،  وكيفية يتم صرف هذه الأموال على الجهات الحكومية المختلفة.</p>
+                        <p>للمزيد عن المشروع وكيفية حساب ضريبة الدخل <a id="show-menu" href="#">اضغط هنا</a></p>
+                    </div>
+
+                </div>
+                <div class="footer">
+                    <div class="share">
+                        <ul>
+                        <li class="facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<URL>">شَارك <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="twitter"><a href="http://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>">غرّد <i class="fa fa-twitter"></i></a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="break"><img src="assets/img/calculate.png"></div>
+                    <div class="license">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <img alt="رخصة المشاع الابداعي" style="border-width:0" src="assets/img/cc.logo.svg"></a>
+                        <p>
+                            محتوى هذا الموقع مرخص بموجب <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">رخصة المشاع الإبداعي نَسب المُصنَّف - غير تجاري - الترخيص بالمثل 4.0 دولي</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pane pane-left">
+          <div class="inside">
+            <div class="header">
+                <h6>لحساب الضريبة المدفوعة شهرياً، ادخل</h6>
+                <h3>الراتب الشهري</h3>
+                <div class="input">
+                    <div class="edit">
+                    <i class="fa fa-pencil"></i>
+                    <input class="salary" type="text" id="salary" readonly>
+                    <span class="pound">جنيه</span>
+                    </div>
+                </div>
+                <div class="holder">
+                    <div id="slider"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="no-result">
+                  <h2>معفي من الضرائب</h2>
+                </div>
+                <div class="result" id="result">
+                  <h2>الضريبة الشهرية</h2>
+                  <div class="spinner">
+                    <div class="double-bounce1"></div>
+                  </div>
+                  <div class="charts">
+                    <div class="total-tax">
+                      <figure>
+                        <figcaption>
+                          <div id="total" class="total tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="200" height="200">
+                          <circle class="round" cx="100" cy="100" r="100" />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div class="sectors" id="sectors">
+                      <div class="container clearfix wrap">
+
+
+                      <figure class="sector soc-sec">
+                        <figcaption>
+                          <div id="soc-sec" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الحماية الاجتماعية</p>
+                        </a>
+                      </figure>
+                      <figure class="sector public-service">
+                        <figcaption>
+                          <div id="public-service" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الخدمات العامة</p>
+                        </a>
+                      </figure>
+                      <figure class="sector order-safety">
+                        <figcaption>
+                          <div id="order-safety" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">النظام العام</p>
+                        </a>
+                      </figure>
+                      <figure class="sector economy">
+                        <figcaption>
+                          <div id="economy" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الشئون الإقتصادية</p>
+                        </a>
+                      </figure>
+                      <figure class="sector enviroment">
+                        <figcaption>
+                          <div id="enviroment" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">حماية البيئة</p>
+                        </a>
+                      </figure>
+                      <figure class="sector housing">
+                        <figcaption>
+                          <div id="housing" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الإسكان والمرافق</p>
+                        </a>
+                      </figure>
+                      <figure class="sector health">
+                        <figcaption>
+                          <div id="health" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الصحة</p>
+                        </a>
+                      </figure>
+                      <figure class="sector youth-culture">
+                        <figcaption>
+                          <div id="youth-culture" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">الشباب  والثقافة</p>
+                        </a>
+                      </figure>
+                      <figure class="sector education">
+                        <figcaption>
+                          <div id="education" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">التعليم</p>
+                        </a>
+                      </figure>
+                      <figure class="sector misc">
+                        <figcaption>
+                          <div id="misc" class="sector-tax tax"></div>
+                          <div class="pound">جنيه</div>
+                        </figcaption>
+                        <svg width="100" height="100">
+                          <circle class="round" cx="135" cy="55" r="47.5" transform="rotate(-90,90,95)" />
+                        </svg>
+                        <span class="icon"></span>
+                        <a class="show-overlay" href="#">
+                          <p class="sector-title">أنشطة متنوعة</p>
+                        </a>
+                      </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        <div class="pane overlay">
+          <div class="overlay-wrap soc-sec">
+            <div class="inside">
+                <a class="close" href="#">العودة للنتائج <i class="fa fa-arrow-left"></i></a>
+                <div class="article">
+                    <div class="header">
+                        <span class="icon"></span>
+                        <h3>قطاع الحماية الاجتماعية</h3>
+                        <div class="wrap">
+                            <div class="num">217.3</div>
+                            <div class="pound subtitle">مليار جنيه</div>
+                        </div>
+                        <div class="wrap">
+                            <div class="num percentage">27.5%</div>
+                            <div class="subtitle">من جملة الانفاق العام</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                    <p>دعم السلع التمونية والآساسية والإضافية ودعم المواد البترولية من سولار بوتاجاز وغاز طبيعي وبنزين وكيروسين ومازوت، ودعم الكهرباء في إطار السياسة العامة لإظهار دعم الطاقة بالموازنة العامة للدولة، فضلا عن دعم اسكان محدودي الدخل والقروض الميسرة وتنشيط الصادرات ودعم متطلبات التنمية الصناعية.</p>
+                    <p> دعم السلع التمونية والآساسية والإضافية ودعم المواد البترولية من سولار بوتاجاز وغاز طبيعي وبنزين وكيروسين ومازوت، ودعم الكهرباء في إطار السياسة العامة لإظهار دعم الطاقة بالموازنة العامة للدولة، فضلا عن دعم اسكان محدودي الدخل والقروض الميسرة وتنشيط الصادرات ودعم متطلبات التنمية الصناعية.</p>
+                </div>
+
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
